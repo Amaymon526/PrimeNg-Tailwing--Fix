@@ -1,0 +1,58 @@
+/* Tailwind CSS Fixes */
+/* Fix for Tailwind reset removing all input borders */
+/* Uses PrimeNG CSS Custom Properties for consistent theming */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--p-text-color, #495057);
+  background-color: var(--p-content-background, #fff);
+  background-clip: padding-box;
+  border: 1px solid var(--p-content-border-color, #ced4da);
+  border-radius: var(--p-border-radius, 0.25rem);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+select:focus,
+textarea:focus {
+  color: var(--p-text-color, #495057);
+  background-color: var(--p-content-background, #fff);
+  border-color: var(--p-primary-color, #80bdff);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem var(--p-focus-ring, rgba(0, 123, 255, 0.25));
+}
+
+input[type="checkbox"] {
+  width: auto;
+  padding: 0;
+}
+
+/* PrimeNG AutoComplete Dropdown Button */
+.p-autocomplete-dropdown {
+  background-color: var(--p-autocomplete-dropdown-background, var(--p-button-secondary-background, #e2e8f0));
+  border-color: var(--p-autocomplete-dropdown-border-color, var(--p-button-secondary-border-color));
+  color: var(--p-autocomplete-dropdown-color, var(--p-button-secondary-color));
+
+  &:hover {
+    background-color: var(--p-autocomplete-dropdown-hover-background, var(--p-button-secondary-hover-background));
+    border-color: var(--p-autocomplete-dropdown-hover-border-color, var(--p-button-secondary-hover-border-color));
+  }
+}
